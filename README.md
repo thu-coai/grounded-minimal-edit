@@ -15,7 +15,7 @@ Download persona evaluator from [here](https://drive.google.com/file/d/1VJ_TM6sy
 
 ### PersonaMinEdit Dataset Format
 Training data (data/personachat-ucpt/train.json):
-```json
+```
 [
     ...
     {
@@ -27,7 +27,7 @@ Training data (data/personachat-ucpt/train.json):
 ]
 ```
 Validation and test data (data/personachat-ucpt/{valid, test}.json):
-```json
+```
 [
     ...
     {
