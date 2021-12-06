@@ -58,7 +58,7 @@ class Config(object):
                           ]:
             self.seed = 0
         else:
-            self.seed = [0, 1, 2, 3, 4, 5][3]
+            self.seed = [0, 1, 2, 3, 4, 5][0]
         self.gpu = torch.cuda.is_available()
 
         # Steps.
