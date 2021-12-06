@@ -52,7 +52,7 @@ class BertEval(object):
         self.train_batch_size = 32
         self.eval_batch_size = 32
 
-        self.use_local = True
+        self.use_local = False
         if self.use_local:
             DIR = '../pretrained_transformer_weights'
             self.model_name_or_path = os.path.join(DIR, self.model_name_or_path)

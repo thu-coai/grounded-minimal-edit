@@ -26,7 +26,7 @@ class Config(object):
         self.model_name_or_path = ['gpt2'][0]
 
         # Training configuration.
-        self.use_local = True
+        self.use_local = False
         self.max_grad_norm = 1.0
         self.gen_lr = 5e-5
         self.max_response_len = 32
