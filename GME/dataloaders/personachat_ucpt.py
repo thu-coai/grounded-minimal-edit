@@ -73,7 +73,7 @@ class PersonaChat(PersonaChatBase):
         ]
         self.model = model
         if self.model == 'cprm':
-            self.response_to_grads = torch.load('../UCPT-Gradient/response_to_grads')
+            self.response_to_grads = torch.load(os.path.join(self.root, 'response_to_grads'))
 
         if os.path.exists(self.cached_features_file) and not config.overwrite_cache:
             print("Loading features from cached file {}".format(self.cached_features_file))
@@ -277,9 +277,10 @@ class PersonaChatPersonaLabeling(PersonaChatBase):
     def __init__(self, mode, tokenizer, model):
         super(PersonaChatPersonaLabeling, self).__init__(mode, tokenizer)
         self.model = model
+        self.root = os.path.join('../data', 'personachat-ucpt')
 
         features = PersonaChat('train', tokenizer, 'transfertransfo').features
-        self.response_to_grads = torch.load('../UCPT-Gradient/response_to_grads')
+        self.response_to_grads = torch.load(os.path.join(self.root, 'response_to_grads'))
 
         if self.mode == 'train':
             if self.model == 'persona-labeling':
